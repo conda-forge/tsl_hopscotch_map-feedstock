@@ -1,6 +1,6 @@
 {% set name = "tsl_hopscotch_map" %}
-{% set version = "v2.1.0" %}
-{% set sha256 = "e3a3b66e89e29a6583a522d3410d212b8e6b13a987245a9f6dfb439df8b00bf4" %}
+{% set version = "2.3.1" %}
+{% set sha256 = "53dab49005cd5dc859f2546d0d3eef058ec7fb3b74fc3b19f4965a9a151e9b20" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/Tessil/hopscotch-map/archive/{{ version }}.tar.gz
+  url: https://github.com/Tessil/hopscotch-map/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 2000
-  skip: True  # [win and vc<14]
+  number: 0
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
